@@ -1,0 +1,292 @@
+.projectContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.projectContent {
+  max-width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.projectHeader {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  padding: 8rem;
+  background-color: #f8f8f8;
+  align-items: flex-start;
+}
+
+.projectMeta {
+  max-width: 540px;
+}
+
+.projectLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.projectLabel::before {
+  content: '+';
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.projectTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #111;
+  margin-bottom: .5rem;
+  font-family: 'Inter', 'Arial', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.projectDescription {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #000;
+  max-width: 460px;
+  font-weight: 400;
+}
+
+.projectShowcase {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: transparent;
+  padding: 8rem 4rem 8rem 0;
+  display: flex;
+  flex-direction: column;
+  /* gap: 8rem; */
+  /* background-color: ; */
+}
+
+.projectCard {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectImageContainer {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+  border-radius: 24px;
+  background-color: #f5f5f5;
+  cursor: zoom-in;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-out;
+  border-radius: 24px;
+  will-change: transform;
+}
+
+/* Remove the hover-based zoom since we're using scroll-based zoom */
+.projectCard:hover .projectImage {
+  transform: none;
+}
+
+.projectImageContainer:hover .projectImage {
+  transform: none;
+}
+
+.projectImageContainer:active .projectImage {
+  transform: none;
+}
+
+.projectInfo {
+  position: relative;
+  padding: 2rem 0;
+  z-index: 2;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.showcaseTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.titleText {
+  position: relative;
+}
+
+.titleArrow {
+  font-size: 2rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.4s ease;
+}
+
+.projectCard:hover .titleArrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.categoryInfo {
+  font-size: 1rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-top: 1rem;
+}
+
+.divider {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient overlay for better text visibility */
+.projectImageContainer::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(to top, 
+    rgba(0,0,0,0.7) 0%,
+    rgba(0,0,0,0.5) 30%,
+    rgba(0,0,0,0) 100%
+  );
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.projectCard:hover .projectImageContainer::after {
+  opacity: 0.9;
+}
+
+@media (max-width: 1400px) {
+  .projectHeader {
+    padding: 6rem;
+  }
+
+  .projectShowcase {
+    padding: 6rem 3rem 0 0;
+  }
+
+  .projectTitle {
+    font-size: 4.5rem;
+  }
+
+  .projectDescription {
+    font-size: 1.25rem;
+  }
+
+  .showcaseTitle {
+    font-size: 3.25rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .projectContent {
+    grid-template-columns: 1fr;
+  }
+
+  .projectHeader {
+    position: relative;
+    height: auto;
+    padding: 5rem;
+    min-height: auto;
+  }
+
+  .projectShowcase {
+    padding: 0 5rem 5rem;
+    height: auto;
+    gap: 6rem;
+  }
+
+  .projectCard {
+    min-height: auto;
+  }
+
+  .projectImageContainer {
+    height: 70vh;
+  }
+
+  .projectTitle {
+    font-size: 4rem;
+  }
+
+  .showcaseTitle {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectHeader {
+    padding: 3rem;
+  }
+
+  .projectShowcase {
+    padding: 0 3rem 3rem;
+    gap: 4rem;
+  }
+
+  .projectTitle {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .projectDescription {
+    font-size: 1.125rem;
+  }
+
+  .projectInfo {
+    padding: 2rem 0;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .showcaseTitle {
+    font-size: 2.75rem;
+  }
+
+  .projectImageContainer {
+    height: 50vh;
+  }
+
+  .projectLabel {
+    margin-bottom: 2rem;
+  }
+
+  .categoryInfo {
+    margin-top: 0;
+  }
+}
