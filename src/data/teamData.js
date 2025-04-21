@@ -23,6 +23,38 @@ const teamMembers = [
     backgroundColor: "#9E9E9E",
     socialLink: "https://linkedin.com/in/noahsullivan",
     image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 4,
+    name: "James Wilson",
+    role: "Project Manager",
+    backgroundColor: "#B8B8B8",
+    socialLink: "https://linkedin.com/in/jameswilson",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 5,
+    name: "Emma Rodriguez",
+    role: "3D Visualization Expert",
+    backgroundColor: "#939393",
+    socialLink: "https://linkedin.com/in/emmarodriguez",
+    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 6,
+    name: "Daniel Kim",
+    role: "UI/UX Designer",
+    backgroundColor: "#A0A0A0",
+    socialLink: "https://linkedin.com/in/danielkim",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 7,
+    name: "Sophia Martinez",
+    role: "Marketing Specialist",
+    backgroundColor: "#B0B0B0",
+    socialLink: "https://linkedin.com/in/sophiamartinez",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   }
 ];
 

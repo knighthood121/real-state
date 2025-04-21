@@ -15,6 +15,7 @@ function App() {
         <Project/>
         <Services/>
         <About/>
+        {/* <TeamMember/> */}
         <Footer />
       </div>
     </Router>
